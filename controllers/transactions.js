@@ -10,6 +10,19 @@ transactions.post("/", (req, res) => {
     }
 })
 
+transactions.put("/:id", (req, res) => {
+    const {id} = req.params
+    if (transactionsArray[id]) {
+        const correctType = checkTypes(req.body, res)
+        if (correctType) {
+            transactionsArray[id] = req.body
+            res.json(transactionsArray[id])
+        }
+    } else {
+        res.redirect("/404")
+    }
+})
+
 transactions.get("/:id", (req, res) => {
     const {id} = req.params
     transactionsArray[id] ? res.json(transactionsArray[id]) : res.redirect("/404")
