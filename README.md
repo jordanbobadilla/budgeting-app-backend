@@ -14,6 +14,7 @@
 ## Deployed Sites
 
 [Budget App Frontend](https://budgeting-app-jordan.netlify.app/)
+
 [Budget App Backend](https://budgeting-app-backend.herokuapp.com/)
 
 
